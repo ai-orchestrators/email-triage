@@ -1,0 +1,62 @@
+<!--
+Email signature scaffold for the email-triage meta-skill.
+Replace the {{PLACEHOLDERS}} with the user's answers from the signature sub-flow.
+Save the rendered file as signature.html alongside the generated SKILL.md.
+
+The signature is rendered as the SECOND block in every drafted reply:
+  [reply text] → [SIGNATURE] → [quoted thread]
+
+The signature owns the sign-off ("Cheers,", "Best,", etc.). Reply text should
+NEVER contain a sign-off — it would duplicate.
+-->
+
+<div style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #333; line-height: 1.5;">
+
+<p>{{SIGNATURE_SIGNOFF}},</p>
+
+<p>
+<b>{{SIGNATURE_NAME}}</b><br>
+{{SIGNATURE_ROLE}}<br>
+{{SIGNATURE_BRAND}}
+</p>
+
+<!-- BEGIN: signature_contact_block -->
+<p>
+{{SIGNATURE_PHONE_LINE}}
+{{SIGNATURE_EMAIL_LINE}}
+{{SIGNATURE_WEBSITE_LINE}}
+</p>
+<!-- END: signature_contact_block -->
+
+<!-- BEGIN: signature_socials_block -->
+<p>
+{{SIGNATURE_SOCIALS_LINES}}
+</p>
+<!-- END: signature_socials_block -->
+
+<!-- BEGIN: signature_disclaimer_block -->
+<p style="font-size: 11px; color: #888;">
+{{SIGNATURE_DISCLAIMER}}
+</p>
+<!-- END: signature_disclaimer_block -->
+
+</div>
+
+<!--
+Placeholder reference for the signature sub-flow:
+
+| Placeholder | Source question | Example |
+|---|---|---|
+| {{SIGNATURE_SIGNOFF}} | "How do you sign off?" | "Cheers" / "Best" / "Kind regards" |
+| {{SIGNATURE_NAME}} | "Your full name" | "Jane Doe" |
+| {{SIGNATURE_ROLE}} | "Your role / title" | "Founder" / "Head of Sales" |
+| {{SIGNATURE_BRAND}} | (auto from BRAND_NAME) | "Acme" |
+| {{SIGNATURE_PHONE_LINE}} | "Phone? (optional)" — render as `Phone: <number><br>` or omit | "Phone: +61 4 1234 5678<br>" |
+| {{SIGNATURE_EMAIL_LINE}} | (auto from PRIMARY_EMAIL) | "Email: jane@acme.com<br>" |
+| {{SIGNATURE_WEBSITE_LINE}} | "Website? (optional)" | "Web: <a href='https://acme.com'>acme.com</a><br>" |
+| {{SIGNATURE_SOCIALS_LINES}} | "Socials? (optional list)" | "<a href='https://linkedin.com/in/jane'>LinkedIn</a> · <a href='https://twitter.com/jane'>X</a>" |
+| {{SIGNATURE_DISCLAIMER}} | "Compliance disclaimer? (optional)" | "Confidentiality notice: this email and any attachments are confidential..." |
+
+Drop signature_contact_block / signature_socials_block / signature_disclaimer_block
+entirely if their fields are all empty.
+-->
