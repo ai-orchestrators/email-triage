@@ -95,7 +95,7 @@ Free-text, optional. Anything the user does not have, leave blank.
 - **Active clients** (comma-separated list — used to auto-tag `project_update` / `client_request`)
 - **Active prospects** (comma-separated — auto-tag `lead_nurture`)
 - **Internal team domains** (comma-separated — auto-tag `internal`)
-- **Internal team named senders** (e.g. `nancy@`, `tania@`)
+- **Internal team named senders** (e.g. `sam@`, `jordan@`)
 - **Voice cues** — phrases that signal `new_lead` / `client_request` for this brand (boost classifier confidence)
 
 ### Step 5 — Categories
@@ -234,14 +234,14 @@ Every template uses these placeholders. Replace them all when rendering.
 | `{{ACTIVE_CLIENTS_CSV}}` | Step 4 | `Foo Co, Bar Inc` (or empty) |
 | `{{PROSPECTS_CSV}}` | Step 4 | `Beta Corp` (or empty) |
 | `{{INTERNAL_DOMAINS_CSV}}` | Step 4 | `acme.com, acme.io` |
-| `{{INTERNAL_NAMED_SENDERS_CSV}}` | Step 4 | `nancy@, tania@` (or empty) |
+| `{{INTERNAL_NAMED_SENDERS_CSV}}` | Step 4 | `sam@, jordan@` (or empty) |
 | `{{VOICE_CUES_CSV}}` | Step 4 | `compliance audit, ISO 27001, SOC 2` |
 | `{{CATEGORIES_KEPT_LIST}}` | Step 5 | bulleted markdown of kept categories |
 | `{{ROUTING_TABLE_ROWS}}` | Step 6 | rendered markdown table rows |
 | `{{SIGNATURE_FILENAME}}` | Step 7 | `signature.html` or `none` |
 | `{{NOTIFY_CHANNEL}}` | Step 8 | `Slack DM (C1234ABCD)` or `console` |
 | `{{CRM_LABEL}}` | Step 9 | `GoHighLevel` or `none` |
-| `{{CRM_DETAILS}}` | Step 9 | `GHL location ID: abc123, default pipeline: 06 Cold Outreach Leads` |
+| `{{CRM_DETAILS}}` | Step 9 | `GHL location ID: abc123, default pipeline: New Leads` |
 | `{{UNIPILE_ACCOUNT_ID}}` | Step 1 sub-question (Unipile only) | `67LqKj...` |
 | `{{MS365_ACCOUNT}}` | Step 1 sub-question (ms365 only) | `triage@acme.com` (default account) |
 

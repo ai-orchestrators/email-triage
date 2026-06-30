@@ -222,7 +222,7 @@ Gmail "archive" = the moment a non-INBOX label is added, the email is filed. The
 - Retry on 504 with exponential backoff (2^attempt seconds, max 3 attempts)
 - List the inbox FRESH right before any batch — IDs older than ~24h may 404
 
-Suggested helper script (Python): expose `move_email(dsn, key, account_id, email_id, folder)` and `apply_moves(account_id, [(eid, folder), ...])`. Read creds from a secrets file (e.g. `~/.ai-secrets/.env`). Never hardcode the API key in this SKILL.md.
+Suggested helper script (Python): expose `move_email(dsn, key, account_id, email_id, folder)` and `apply_moves(account_id, [(eid, folder), ...])`. Read creds from a secrets file kept outside the repo. Never hardcode the API key in this SKILL.md.
 
 Use the routing table below to pick the destination label per category.
 
